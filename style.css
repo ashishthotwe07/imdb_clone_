@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e50914;    /* Red */
+    --secondary-color: #f4c20d;  /* Yellow */
+    --background-color: #000000; /* Light Gray */
+    --accent-color: #1f1f1f;     /* Dark Gray/Black */
+    --text-color: #333333;       /* Dark Gray */
+  }
+  body{
+    background-color: var(--background-color);
+  }
+  a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 22px;
+  }
+
+  /* NAVBAR STYLING */
+
+  .navbar{
+    background-color: var(--accent-color);
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    border-radius: 4px;
+  }
+  .navbar div{
+    width: 500px;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    padding: 5px;
+    border-radius: 9px;
+  }
+  .navbar div input{
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 30px;
+    margin-left: 5px;
+    padding: 0 5px;
+   
+
+  }
+  .navbar h3{
+    color: aliceblue;
+  }
+.navbar h3 img{
+    height: 60px;
+    filter: invert(100%);
+}
+
+  .navbar h3 a{
+    color: aliceblue;
+    text-decoration: none;
+    margin-right: 3px;
+  }
+
+/* MOVIE{ SUGGESTION CONTAINER */
+
+.movieCard{
+  
+margin: 25px;
+  width: 250px;
+  height: 350px;
+  border: 1px solid grey;
+  border-radius: 7px;
+}
+.movie-poster{
+  width: 100%;
+  height: 60%;
+  border: 1px solid grey;
+}
+.movie-poster img{
+  width: 100%;
+  height: 100%;
+
+}
+.movie-poster:nth-child(5n+1) {
+  margin-left: 0;
+  clear: left;
+}
+
+
+.movie-info{
+  padding: 10px;
+  color: aliceblue;
+  position: relative;
+  height: 40%;
+}
+
+
+.movie-info p:last-child{
+ 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Movie PAge  */
+
+/* movie Detail */
+
+
+.movieDetail{
+width: 100%;
+margin-top: 20px;
+padding: 40px;
+color: aliceblue;
+}
+
+/* movie info */
+
+.movieInfo{
+  margin-top: 20px;
+}
+
+.right-side-poster{
+  margin-right: 70px ;
+  width: 300px;
+  height: 500px;
+  cursor: pointer;
+}
+.right-side-poster h4{
+  border: 1px solid white;
+  margin-top: 15px  ;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.right-side-poster h5{
+  border: 1px solid white;
+  margin-top: 15px  ;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  height: 50px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.right-side-poster h5:hover{
+  background-color: #151515;
+}
+
+
+
+.Movie-poster{
+  width: 100%;
+  height: 80%;
+}
+.Movie-poster img{
+  width: 100%;
+  height: 100%
+}
+
+/* left side */
+
+.left-side-info{
+ width: 800px;
+}
+.left-side-info p{
+  font-size: 18px;
+  font-weight: 400;
+  color: #5c91d6;
+  
+}
+.left-side-info p span{
+  font-weight: 600;
+  font-size: 20px;
+  color:aliceblue;
+  margin-right: 5px;
+ 
+}
+
+.back h3 a{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+
+/* favourite container */
+
+.fav-container{
+
+  width: 100%;
+  height: 100vh;
+  padding: 60px;
+}
+
+.fav-head h3{
+  color: aliceblue;
+}
+.fav-head h3 a{
+  color: aliceblue;
+  text-decoration: none;
+}
+.fav-con  .mb-4{
+  height: 400px;
+  width: 300px;
+  /* border: 2px solid aliceblue; */
+}
+.card-img-top{
+  height: 300px;
+  height: 250px;
+}
+
+
+.default{
+  /* color: aliceblue; */
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+  color: #3b3a3a;
+  box-shadow: 1px 1px 4px grey;
+  margin-top: 20px;
+}
+
+
+/* Media query for screens with a width of 950px */
+@media (max-width: 950px) {
+  .navbar div {
+    width: 300px;
+    margin: 0 auto; /* Center align the search box */
+  }
+
+  .movieCard {
+    margin: 15px; /* Decrease margin for better spacing */
+    width: 200px; /* Adjust card width */
+    height: 300px; /* Adjust card height */
+  }
+   .movieDetail{
+    display: flex;
+    flex-direction: column;
+   }
+   .movieInfo{
+    flex-direction: column;
+   }
+   .right-side-poster{
+    width: 100%;
+   }
+  .left-side-info {
+    width: 100%; /* Make the left side info section full width */
+  }
+
+  .right-side-poster {
+    margin-right: 0; /* Remove right margin for better spacing */
+  }
+
+  .right-side-poster h4,
+  .right-side-poster h5 {
+    width: 100%; /* Adjust width of buttons to fill the container */
+  }
+}
+
+
+@media (max-width: 770px){
+  .navbar div {
+    width: 200px;
+    margin: 0 auto; /* Center align the search box */
+  }
+  .navbar h3:last-child{
+    display: none;
+  }
+  .sugestionContainer{
+    padding-right: 0;
+  }
+}
